@@ -1,20 +1,17 @@
-
-
-
-    /* importando google fonts */
+/* importando google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-body{
-    background:#721c24;
+body {
+    background: #721c24;
 }
 
-::selection{
+::selection {
     color: #fff;
     background: #007bff;
 }
@@ -22,72 +19,74 @@ body{
 .start_btn,
 .info_box,
 .quiz_box,
-.result_box{
+.result_box {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
                 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 90%;
+    max-width: 540px;
 }
 
 .info_box.activeInfo,
 .quiz_box.activeQuiz,
-.result_box.activeResult{
+.result_box.activeResult {
     opacity: 1;
     z-index: 5;
     pointer-events: auto;
     transform: translate(-50%, -50%) scale(1);
 }
 
-.start_btn button{
-    font-size: 25px;
+.start_btn button {
+    font-size: 28px; /* tamaño de fuente aumentado */
     font-weight: 500;
     color: #007bff;
-    padding: 15px 30px;
+    padding: 20px 40px; /* padding aumentado */
     outline: none;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px; /* borde más redondeado */
     background: #fff;
     cursor: pointer;
 }
 
-.info_box{
-    width: 540px;
+.info_box {
     background: white;
-    border-radius: 5px;
+    border-radius: 10px;
     transform: translate(-50%, -50%) scale(0.9);
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s ease;
 }
 
-.info_box .info-title{
+.info_box .info-title {
     height: 60px;
     width: 100%;
     border-bottom: 1px solid darkcyan;
     display: flex;
     align-items: center;
     padding: 0 30px;
-    border-radius: 5px 5px 0 0;
+    border-radius: 10px 10px 0 0;
     font-size: 20px;
     font-weight: 600;
 }
 
-.info_box .info-list{
+.info_box .info-list {
     padding: 15px 30px;
 }
 
-.info_box .info-list .info{
+.info_box .info-list .info {
     margin: 5px 0;
     font-size: 17px;
 }
 
-.info_box .info-list .info span{
+.info_box .info-list .info span {
     font-weight: 600;
     color: #007bff;
 }
-.info_box .buttons{
+
+.info_box .buttons {
     height: 100px;
     display: flex;
     align-items: center;
@@ -96,49 +95,48 @@ body{
     border-top: 1px solid lightgrey;
 }
 
-.info_box .buttons button{
+.info_box .buttons button {
     margin: 0 5px;
-    height: 60px;
-    width: 150px;
-    font-size: 16px;
+    height: 70px; /* altura aumentada */
+    width: 180px; /* ancho aumentado */
+    font-size: 18px; /* tamaño de fuente aumentado */
     font-weight: 500;
     cursor: pointer;
     border: none;
     outline: none;
-    border-radius: 5px;
+    border-radius: 10px; /* borde más redondeado */
     border: 1px solid #007bff;
     transition: all 0.3s ease;
 }
 
-.quiz_box{
-    width: 550px;
+.quiz_box {
     background: #fff;
-    border-radius: 5px;
+    border-radius: 10px;
     transform: translate(-50%, -50%) scale(0.9);
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s ease;
 }
 
-.quiz_box header{
+.quiz_box header {
     position: relative;
     z-index: 2;
     height: 70px;
     padding: 0 30px;
     background: #fff;
-    border-radius: 5px 5px 0 0;
+    border-radius: 10px 10px 0 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.1);
 }
 
-.quiz_box header .title{
+.quiz_box header .title {
     font-size: 20px;
     font-weight: 600;
 }
 
-.quiz_box header .timer{
+.quiz_box header .timer {
     color: #004085;
     background: #cce5ff;
     border: 1px solid #b8daff;
@@ -151,13 +149,13 @@ body{
     width: 145px;
 }
 
-.quiz_box header .timer .time_left_txt{
+.quiz_box header .timer .time_left_txt {
     font-weight: 400;
     font-size: 17px;
     user-select: none;
 }
 
-.quiz_box header .timer .timer_sec{
+.quiz_box header .timer .timer_sec {
     font-size: 18px;
     font-weight: 500;
     height: 30px;
@@ -171,7 +169,7 @@ body{
     user-select: none;
 }
 
-.quiz_box header .time_line{
+.quiz_box header .time_line {
     position: absolute;
     bottom: 0px;
     left: 0px;
@@ -179,27 +177,27 @@ body{
     background: #007bff;
 }
 
-section{
+section {
     padding: 25px 30px 20px 30px;
     background: #fff;
 }
 
-section .que_text{
+section .que_text {
     font-size: 25px;
     font-weight: 600;
 }
 
-section .option_list{
+section .option_list {
     padding: 20px 0px;
     display: block;   
 }
 
-section .option_list .option{
+section .option_list .option {
     background: aliceblue;
     border: 1px solid #84c5fe;
-    border-radius: 5px;
-    padding: 8px 15px;
-    font-size: 17px;
+    border-radius: 10px; /* borde más redondeado */
+    padding: 12px 20px; /* padding aumentado */
+    font-size: 18px; /* tamaño de fuente aumentado */
     margin-bottom: 15px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -208,33 +206,33 @@ section .option_list .option{
     justify-content: space-between;
 }
 
-section .option_list .option:last-child{
+section .option_list .option:last-child {
     margin-bottom: 0px;
 }
 
-section .option_list .option:hover{
+section .option_list .option:hover {
     color: #004085;
     background: #cce5ff;
     border: 1px solid #b8daff;
 }
 
-section .option_list .option.correct{
+section .option_list .option.correct {
     color: #155724;
     background: #d4edda;
     border: 1px solid #c3e6cb;
 }
 
-section .option_list .option.incorrect{
+section .option_list .option.incorrect {
     color: #721c24;
     background: #f8d7da;
     border: 1px solid #f5c6cb;
 }
 
-section .option_list .option.disabled{
+section .option_list .option.disabled {
     pointer-events: none;
 }
 
-section .option_list .option .icon{
+section .option_list .option .icon {
     height: 26px;
     width: 26px;
     border: 2px solid transparent;
@@ -245,20 +243,20 @@ section .option_list .option .icon{
     transition: all 0.3s ease;
     line-height: 24px;
 }
-.option_list .option .icon.tick{
+.option_list .option .icon.tick {
     color: #23903c;
     border-color: #23903c;
     background: #d4edda;
 }
 
-.option_list .option .icon.cross{
+.option_list .option .icon.cross {
     color: #a42834;
     background: #f8d7da;
     border-color: #a42834;
 }
 
-footer{
-    height: 60px;
+footer {
+    height: 70px; /* altura aumentada */
     padding: 0 30px;
     display: flex;
     align-items: center;
@@ -266,30 +264,30 @@ footer{
     border-top: 1px solid lightgrey;
 }
 
-footer .total_que span{
+footer .total_que span {
     display: flex;
     user-select: none;
 }
 
-footer .total_que span p{
+footer .total_que span p {
     font-weight: 500;
     padding: 0 5px;
 }
 
-footer .total_que span p:first-child{
+footer .total_que span p:first-child {
     padding-left: 0px;
 }
 
-footer button{
-    height: 40px;
-    padding: 0 13px;
-    font-size: 18px;
+footer button {
+    height: 50px; /* altura aumentada */
+    padding: 0 20px; /* padding aumentado */
+    font-size: 20px; /* tamaño de fuente aumentado */
     font-weight: 400;
     cursor: pointer;
     border: none;
     outline: none;
     color: #fff;
-    border-radius: 5px;
+    border-radius: 10px; /* borde más redondeado */
     background: #007bff;
     border: 1px solid #007bff;
     line-height: 10px;
@@ -299,22 +297,21 @@ footer button{
     transition: all 0.3s ease;
 }
 
-footer button:hover{
+footer button:hover {
     background: #0263ca;
 }
 
-footer button.show{
+footer button.show {
     opacity: 1;
     pointer-events: auto;
     transform: scale(1);
 }
 
-.result_box{
+.result_box {
     background: #fff;
-    border-radius: 5px;
+    border-radius: 10px;
     display: flex;
     padding: 25px 30px;
-    width: 450px;
     align-items: center;
     flex-direction: column;
     justify-content: center;
@@ -322,76 +319,181 @@ footer button.show{
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s ease;
+    width: 90%;
+    max-width: 450px;
 }
 
-.result_box .icon{
+.result_box .icon {
     font-size: 100px;
     color: #007bff;
     margin-bottom: 10px;
 }
 
-.result_box .complete_text{
+.result_box .complete_text {
     font-size: 20px;
     font-weight: 500;
 }
 
-.result_box .score_text span{
+.result_box .score_text span {
     display: flex;
     margin: 10px 0;
     font-size: 18px;
     font-weight: 500;
 }
 
-.result_box .score_text span p{
+.result_box .score_text span p {
     padding: 0 4px;
     font-weight: 600;
 }
 
-.result_box .buttons{
+.result_box .buttons {
     display: flex;
     margin: 20px 0;
 }
 
-.result_box .buttons button{
+.result_box .buttons button {
     margin: 0 10px;
-    height: 60px;
-    padding: 0 20px;
-    font-size: 18px;
+    height: 70px; /* altura aumentada */
+    padding: 0 30px; /* padding aumentado */
+    font-size: 20px; /* tamaño de fuente aumentado */
     font-weight: 500;
     cursor: pointer;
     border: none;
     outline: none;
-    border-radius: 5px;
+    border-radius: 10px; /* borde más redondeado */
     border: 1px solid #007bff;
     transition: all 0.3s ease;
 }
 
-.buttons button.restart{
+.buttons button.restart {
     color: #fff;
     background: #007bff;
 }
 
-.buttons button.restart:hover{
+.buttons button.restart:hover {
     background: #0263ca;
 }
 
-.buttons button.quit{
+.buttons button.quit {
     color: #007bff;
     background: #fff;
 }
 
-.buttons button.quit:hover{
+.buttons button.quit:hover {
     color: #fff;
     background: #007bff;
 }
 
 .avatar {
-    width:70%;
-    
+    width: 70%;
     margin-left: 65px;
-   
-  
+}
 
+/* Media Queries */
+@media (max-width: 768px) {
+    .start_btn,
+    .info_box,
+    .quiz_box,
+    .result_box {
+        width: 95%;
+    }
 
+    .quiz_box header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
+    .quiz_box header .timer {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    section .que_text {
+        font-size: 20px;
+    }
+
+    section .option_list .option {
+        font-size: 15px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    footer .total_que {
+        margin-bottom: 10px;
+    }
+
+    footer button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .start_btn button {
+        font-size: 20px;
+        padding: 10px 20px;
+    }
+
+    .info_box .info-title {
+        font-size: 18px;
+    }
+
+    .info_box .info-list .info {
+        font-size: 15px;
+    }
+
+    .info_box .buttons button {
+        height: 50px;
+        width: 130px;
+        font-size: 14px;
+    }
+
+    .quiz_box header {
+        padding: 10px 20px;
+    }
+
+    section {
+        padding: 20px 20px 15px 20px;
+    }
+
+    section .que_text {
+        font-size: 18px;
+    }
+
+    section .option_list .option {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    footer {
+        padding: 10px 20px;
+    }
+
+    footer button {
+        height: 35px;
+        padding: 0 10px;
+        font-size: 16px;
+    }
+
+    .result_box {
+        width: 90%;
+    }
+
+    .result_box .complete_text {
+        font-size: 18px;
+    }
+
+    .result_box .score_text span {
+        font-size: 16px;
+    }
+
+    .result_box .buttons button {
+        height: 50px;
+        padding: 0 15px;
+        font-size: 16px;
+    }
 }
